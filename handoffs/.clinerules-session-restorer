@@ -4,19 +4,27 @@ Follow the structured prompts in handoffs/0-instructions/prompts/ directory for 
 
 ## Context Prioritization
 
-1. **Reading Order**:
-   - Start with milestone summaries (0-prefixed documents)
-   - Progress to handoff documents in numerical order
-   - Read chronologically, from earliest to most recent
+1. **Hierarchical Reading Order**:
+   - Start with epic summaries (0-prefixed documents in epic directories)
+   - Progress to milestone summaries (0-prefixed documents in milestone directories)
+   - Finish with handoff documents in numerical order
+   - Read chronologically, from earliest to most recent within each level
 
 2. **Document Selection**:
+   - Focus ONLY on 0-prefixed documents within epic directories (E*-prefixed)
    - Focus ONLY on 0-prefixed documents within milestone directories
-   - Skip numbered documents within milestone directories
+   - Skip numbered documents within both epic and milestone directories
    - Read ALL handoff documents from the root directory
-   - Always prioritize handoffs in the root directory
+   - Prioritize current handoffs in the root directory for most recent state
 
-3. **Verification Requirements**:
+3. **Directory Classification**:
+   - Epic directories: prefixed with "E" followed by number (E1-feature-domain)
+   - Milestone directories: numbered folders without "E" prefix (1-feature)
+   - Handoff documents: numbered .md files directly in handoffs/ root
+
+4. **Verification Requirements**:
+   - List all epic directories found in numerical order
    - List all milestone directories found in numerical order
    - Report all handoff documents examined
    - Summarize project state before proceeding with user instructions
-   - Confirm complete understanding of project history
+   - Confirm complete understanding of project hierarchy

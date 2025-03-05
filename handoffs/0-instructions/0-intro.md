@@ -1,10 +1,11 @@
-# Handoff and Milestone System
+# Handoff, Milestone, and Epic System
 
 ## Core Concept
 
 This system enables efficient knowledge transfer between LLM sessions through:
 1. Handoffs: Sequential session reports capturing completed work
 2. Milestones: Consolidated knowledge from multiple handoffs
+3. Epics: Architectural patterns and domain knowledge across related milestones
 
 ## Documents Structure
 
@@ -17,6 +18,11 @@ This system enables efficient knowledge transfer between LLM sessions through:
 - Stored in numbered folders (1-feature-complete/)
 - Consolidate multiple handoff documents
 - Summarize achievements and lessons learned
+
+**Epics**:
+- Organized in E-prefixed folders (E1-authentication-system/)
+- Group 2-4 related milestone directories
+- Capture architectural patterns and domain knowledge
 
 ## Creation Triggers
 
@@ -33,6 +39,12 @@ This system enables efficient knowledge transfer between LLM sessions through:
 - Critical problem solved with valuable lessons
 - Project reaches stable/deployable state
 
+**Create epic documents when**:
+- Multiple related milestones form a complete domain area
+- 2-4 functionally related milestones have accumulated
+- System capability is fully implemented across features
+- Architectural patterns have emerged across multiple features
+
 ## Context Assessment Process
 
 Before each major response:
@@ -47,7 +59,7 @@ Before each major response:
 Add to project's `.clinerules` file:
 
 ```
-Assess context relevance after each substantive exchange. Create handoff documents in the handoffs/ directory when context becomes diluted with irrelevant information, after completing discrete project segments, or during prolonged debugging sessions. Create milestone documents in handoffs/ subdirectories when completing major features or after 3-5 related handoffs accumulate. A fresh LLM session with focused context often solves problems that an overloaded session cannot.
+Assess context relevance after each substantive exchange. Create handoff documents in the handoffs/ directory when context becomes diluted with irrelevant information, after completing discrete project segments, or during prolonged debugging sessions. Create milestone documents in handoffs/ subdirectories when completing major features or after 3-5 related handoffs accumulate. Create epic documents when 2-4 related milestones form a complete domain area or system capability. A fresh LLM session with focused context often solves problems that an overloaded session cannot.
 ```
 
 ## Compatibility
@@ -60,9 +72,14 @@ Optimized for Claude 3.7 Sonnet with thinking enabled (2k-8k reasoning capacity)
 2. Generate milestone when threshold conditions met
 3. Create milestone folder and move relevant handoff files
 4. Create summary documentation in milestone folder
+5. Generate epic when related milestones accumulate
+6. Create epic folder and move milestone directories
+7. Create architectural summary documentation in epic folder
 
 ## Reference Documentation
 
 - [1-handoff-instructions.md](./1-handoff-instructions.md): Handoff document format
 - [2-milestone-instructions.md](./2-milestone-instructions.md): Milestone process
-- [3-milestone-scripts.md](./3-milestone-scripts.md): Automation scripts
+- [3-milestone-scripts.md](./3-milestone-scripts.md): Milestone automation scripts
+- [3-epic-instructions.md](./3-epic-instructions.md): Epic process
+- [5-epic-scripts.md](./5-epic-scripts.md): Epic automation scripts

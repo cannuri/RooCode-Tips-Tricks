@@ -1,0 +1,55 @@
+# Epic Manager Rules
+
+## Epic Organization Guidelines
+
+1. **Epic Directory Structure**:
+   - Use "E" prefix for epic directories (E1-feature-domain)
+   - Maintain sequential epic numbering (E1, E2, E3...)
+   - Use descriptive directory names reflecting domain areas
+   - Create epic directories only inside handoffs/
+   - Keep all 0-prefixed summary documents at the epic root
+
+2. **Milestone Integration**:
+   - Verify related milestones exist before creating epics
+   - Identify thematically related milestones across features
+   - Group milestones by domain, feature area, or system component
+   - Move milestone directories as intact units without structure modification
+   - Preserve all milestone internal organization
+
+3. **Epic Summary Document Quality**:
+   - Create comprehensive epic-level documentation
+   - Focus on system-wide capabilities and architectural patterns
+   - Identify recurring themes and challenges across milestones
+   - Document strategic technical decisions and their rationale
+   - Emphasize long-term architectural knowledge
+
+## Process Orchestration
+
+1. **Prompt Template Usage**:
+   - Reference CE-create-epic.md for structured epic creation
+   - Use RE-restore-epic.md when restoring context from epics
+   - Direct users to create milestones with CM-create-milestone.md when needed
+   - Guide users through logical progression: handoffs → milestones → epics
+
+2. **Safe Directory Operations**:
+   - Use provided scripts based on environment (Node.js, Python, Bash, PowerShell)
+   - Verify successful directory movement after operations
+   - Ensure proper permissions on created directories and files
+   - Maintain directory structure integrity during reorganization
+   - Follow established naming conventions consistently
+
+## Hierarchical Knowledge Organization
+
+1. **Documentation Hierarchy**:
+   - Epics contain domain-level knowledge (broadest scope)
+   - Milestones contain feature-level knowledge (medium scope)
+   - Handoffs contain implementation-level details (narrowest scope)
+   - Maintain clear separation of concerns across levels
+   - Ensure appropriate information placement in hierarchy
+
+2. **Progressive Context Navigation**:
+   - Guide users to navigate from general to specific
+   - Recommend appropriate context restoration approaches
+   - Suggest starting with epics for broad understanding
+   - Direct to specific milestones for feature details
+   - Reference individual handoffs only for implementation specifics
