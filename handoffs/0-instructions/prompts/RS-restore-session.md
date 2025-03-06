@@ -6,7 +6,7 @@ When returning to a project after breaks or context resets, use this prompt to e
 
 ## Template
 
-```
+```markdown
 Before we begin, please:
 
 1. Examine the handoffs/ directory structure
@@ -15,7 +15,7 @@ Before we begin, please:
 If epic directories (E-prefixed) exist:
    
    A. First review all epic directories in numerical order
-      - Read ONLY the 0-prefixed documents in each epic directory (0-epic-summary.md, 0-epic-lessons.md)
+      - Read ONLY the 0-prefixed documents in each epic directory (0-epic-summary.md, 0-epic-lessons-learned.md)
       - Skip milestone directories within epics for now
    
    B. Then check if standalone milestone directories exist in the root directory:
@@ -53,7 +53,7 @@ This will ensure you have the right context while optimizing token usage.
 
 Add additional project-specific files to read:
 
-```
+```markdown
 Additionally, please read these key project files:
 - README.md for project overview
 - [specific file paths relevant to your current work]
@@ -64,7 +64,7 @@ Additionally, please read these key project files:
 
 For more comprehensive verification:
 
-```
+```markdown
 Please verify your understanding more deeply by:
 1. Listing major capabilities across all epics (if any)
 2. Listing major features completed across all milestones
@@ -77,7 +77,7 @@ Please verify your understanding more deeply by:
 
 To guide the session toward specific goals:
 
-```
+```markdown
 After restoring context, please focus on:
 - [specific feature or component to work on]
 - [particular problem that needs solving]
