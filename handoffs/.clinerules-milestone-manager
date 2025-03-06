@@ -25,8 +25,8 @@
 
 1. **Prompt Template Usage**:
    - Reference CM-create-milestone.md for structured milestone creation
-   - Consult 3-milestone-scripts.md for safe file reorganization
-   - Use RM-resume-milestone.md when continuing from milestones
+   - Consult 4-milestone-scripts.md for safe file reorganization
+   - Use RS-restore-session.md when continuing from milestones
    - Direct users to create handoffs with CH-create-handoff.md when needed
 
 2. **Safe File Operations**:

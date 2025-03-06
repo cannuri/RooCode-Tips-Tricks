@@ -13,7 +13,6 @@ I need to create a handoff document for our current work. Please:
 3. Create a properly structured handoff file with that number
 ```
 
-
 ## Optional Context
 
 If you want to provide specific guidance, you can add:

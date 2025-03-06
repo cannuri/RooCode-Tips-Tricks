@@ -1,13 +1,16 @@
 # Milestone System
 
 ## Purpose
+
 Record milestones when:
+
 - Major component completed
 - Critical bug fixed
 - Implementation changed
 - Feature delivered
 
 ## Core Principles
+
 - **Concise**: Every token counts
 - **Factual**: Concrete details, not stories
 - **Relevant**: Include essential only
@@ -15,6 +18,7 @@ Record milestones when:
 - **Learning**: Document issues and solutions
 
 ## Handoff to Milestone
+
 1. **Create Handoffs First**:
    - Write handoffs during development
    - Capture work completed in each session
@@ -29,6 +33,7 @@ Record milestones when:
    - Prioritize long-term value info
 
 ## Workflow
+
 1. **Development with Handoffs**:
    - Document work in handoff files
    - Progress through sequential handoffs
@@ -42,6 +47,7 @@ Record milestones when:
    - Name reflects actual achievement
 
 ## Files
+
 1. **0-milestone-summary.md**:
    - Date completed
    - Changes implemented
@@ -49,7 +55,7 @@ Record milestones when:
    - Discoveries found
    - Current system state
 
-2. **0-lessons-learned.md**:
+2. **0-milestone-lessons-learned.md**:
    - Problems encountered
    - Working solutions
    - Tools/libraries used
@@ -57,6 +63,7 @@ Record milestones when:
    - Reusable patterns
 
 ## Naming Convention
+
 - System files: prefix with "0-" (0-milestone-summary.md)
 - Handoffs: numbered without "0-" (1-setup.md)
 - Milestone folders: numbered without "0-" (1-feature)
@@ -64,6 +71,7 @@ Record milestones when:
 ## Writing Style
 
 ### 0-milestone-summary.md
+
 ```
 ## Changes
 - Data connector with batch processing
@@ -81,7 +89,8 @@ Record milestones when:
 - Missing refs: IDs 53, 54 not in dataset
 ```
 
-### 0-lessons-learned.md
+### 0-milestone-lessons-learned.md
+
 ```
 ## Config Library Migration
 
@@ -103,7 +112,9 @@ Record milestones when:
 ```
 
 ## Example
+
 Before: 3 handoff files
+
 ```
 handoffs/1-api-setup.md
 handoffs/2-core-entities-implementation.md
@@ -111,9 +122,10 @@ handoffs/3-relationship-fixes.md
 ```
 
 After:
+
 ```
 handoffs/ (continues to accumulate new handoffs)
 
 handoffs/1-core-entities/
   ├── 0-milestone-summary.md  # Decisions, discoveries
-  └── 0-lessons-learned.md    # Patterns, fixes
+  └── 0-milestone-lessons-learned.md    # Patterns, fixes

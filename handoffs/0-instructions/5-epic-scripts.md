@@ -3,6 +3,7 @@
 These one-liner functions create a new epic folder within handoffs/ and move selected milestone directories into it.
 
 ## Bash
+
 ```bash
 # Generate next epic number by finding the highest existing E-prefixed directory
 epic_num=$(find handoffs/ -maxdepth 1 -type d -name "E[0-9]*-*" 2>/dev/null | wc -l | xargs test "0" -eq && echo "1" || find handoffs/ -maxdepth 1 -type d -name "E[0-9]*-*" | sort -V | tail -n1 | sed -E 's/.*\/E([0-9]+).*/\1/' | awk '{print $1+1}'); 
@@ -20,6 +21,7 @@ done
 ```
 
 ## PowerShell
+
 ```powershell
 # Generate next epic number by finding the highest existing E-prefixed directory
 $epic_num = if (!(Get-ChildItem "handoffs" -Directory | Where {$_.Name -match "^E\d+-"})) {1} else {(Get-ChildItem "handoffs" -Directory | Where {$_.Name -match "^E\d+-"} | ForEach {[int]($_.Name -match "E(\d+)-" | ForEach {$Matches[1]})} | Measure -Max).Maximum + 1}; 
@@ -37,6 +39,7 @@ foreach ($num in $milestones_to_move) {
 ```
 
 ## Python
+
 ```python
 import os, re, shutil
 
@@ -60,6 +63,7 @@ for num in milestones_to_move:
 ```
 
 ## Node.js
+
 ```javascript
 const fs = require('fs'), path = require('path');
 
@@ -88,16 +92,4 @@ milestones_to_move.forEach(num => {
 });
 ```
 
-## Important Usage Notes
-
-1. Replace "epic-name" with a descriptive name for your epic (e.g., "authentication-system")
-2. Replace the milestone numbers in `milestones_to_move` with the actual milestone numbers you want to include in this epic
-3. These scripts only move the milestone directories; you still need to create the 0-epic-summary.md and 0-epic-lessons.md files
-4. Always verify the script has correctly identified your milestones before executing
-
-For example, if you want to create an epic for your API system that includes milestones 2, 4, and 7:
-
-1. Change "epic-name" to "api-system"
-2. Set milestones_to_move to "2 4 7" (Bash), @("2", "4", "7") (PowerShell), or ["2", "4", "7"] (Python/Node.js)
-3. Execute the script
-4. Create the summary documents within the new epic directory
+Replace "epic-name" with the actual epic name before executing.

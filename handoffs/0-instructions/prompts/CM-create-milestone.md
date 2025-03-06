@@ -15,10 +15,9 @@ I need to create a milestone for our completed [FEATURE/COMPONENT]. Please:
 3. Determine the next sequential milestone number by examining existing milestone directories
 4. Create the milestone directory with that number
 5. Move all numbered handoff documents from the handoffs/ root into this milestone directory
-6. Create the required 0-milestone-summary.md and 0-lessons-learned.md files
-7. Using the language that seems most appropriate for the current environment, write a script like the examples in 3-milestone-scripts.md to reorganize the handoffs into a milestone folder.
+6. Create the required 0-milestone-summary.md and 0-milestone-lessons-learned.md files
+7. Using the language that seems most appropriate for the current environment, write a script like the examples in 4-milestone-scripts.md to reorganize the handoffs into a milestone folder.
 ```
-
 
 ## Important Workflow Note
 

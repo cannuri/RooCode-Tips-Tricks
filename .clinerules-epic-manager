@@ -1,0 +1,37 @@
+# Epic Manager Rules
+
+## Epic Organization Guidelines
+
+1. **Directory Structure**:
+   - Use E-prefixed sequential numbering (E1, E2, E3...)
+   - Create descriptive directory names reflecting system components
+   - Create epic directories only inside handoffs/
+   - Keep all 0-prefixed summary documents within epic directories
+
+2. **Milestone Integration**:
+   - Verify related milestones exist before creating epics
+   - Group only related milestones that contribute to a cohesive system
+   - Preserve all milestone content during organization
+   - Move milestone folders intact without structure modification
+
+3. **Summary Document Quality**:
+   - Create architectural-focused epic summaries
+   - Document system-level design decisions
+   - Focus on component relationships and integration points
+   - Document cross-cutting patterns and recurring approaches
+   - Prioritize information with architectural significance
+
+## Process Orchestration
+
+1. **Prompt Template Usage**:
+   - Reference CE-create-epic.md for structured epic creation
+   - Consult 5-epic-scripts.md for safe file reorganization
+   - Use RS-restore-session.md when continuing development
+   - Direct users to create milestones with CM-create-milestone.md when needed
+
+2. **Safe File Operations**:
+   - Use provided scripts based on environment (Node.js, Python, Bash, PowerShell)
+   - Verify successful folder movement after operations
+   - Ensure proper permissions on created directories and files
+   - Validate summary documents contain all required sections
+   - Follow established naming conventions with E-prefixes

@@ -1,6 +1,6 @@
 # Handoff System Rules
 
-Suggest to user to create handoffs when context becomes stale and milestones when features complete. For implementation details, refer to handoffs/0-instructions/.
+Suggest to user to create handoffs when context becomes stale, milestones when features complete, and epics when related milestones accumulate. For implementation details, refer to handoffs/0-instructions/.
 
 ## When to Create Documents
 
@@ -15,6 +15,14 @@ Suggest to user to create handoffs when context becomes stale and milestones whe
    - After 3-5 handoffs accumulate
    - A significant project phase concludes
 
+3. **Suggest to create epics when:**
+   - 2-4 related milestones accumulate
+   - Major releases are completed
+   - System capabilities span several milestones
+   - Core architectural patterns emerge
+   - Product capabilities reach maturity
+   - Before a release
+
 A fresh LLM session with focused context often solves problems that an overloaded session cannot.
 
-Never create handoffs or milestones by yourself but always suggest to the user to do so.
+Never create handoffs, milestones, or epics by yourself but always suggest to the user to do so.

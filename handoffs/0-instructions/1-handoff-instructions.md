@@ -1,81 +1,131 @@
-# Shift Change: Handoff Guidelines
+# Milestone System
 
 ## Purpose
-Shift change report - tell next person what happened during your shift, not how to do their job. Include events and learnings not documented elsewhere.
 
-## Information Sources
-1. **Memory**: Review all previous prompts and responses
-2. **Conversation**: Extract key information from entire thread
-3. **Project Context**: Consider all information from the project
+Record milestones when:
 
-## Template
+- Major component completed
+- Critical bug fixed
+- Implementation changed
+- Feature delivered
+
+## Core Principles
+
+- **Concise**: Every token counts
+- **Factual**: Concrete details, not stories
+- **Relevant**: Include essential only
+- **Future-Focused**: What next devs need
+- **Learning**: Document issues and solutions
+
+## Handoff to Milestone
+
+1. **Create Handoffs First**:
+   - Write handoffs during development
+   - Capture work completed in each session
+   - Accumulate in handoffs/ directory
+   - Use sequential numbering (1-setup.md, 2-entities.md)
+
+2. **Distill to Milestones**:
+   - Extract key info from handoffs
+   - Identify patterns across handoffs
+   - Consolidate repeated themes
+   - Transform details into concise facts
+   - Prioritize long-term value info
+
+## Workflow
+
+1. **Development with Handoffs**:
+   - Document work in handoff files
+   - Progress through sequential handoffs
+   - Handoffs accumulate in handoffs/ directory
+
+2. **At milestone**:
+   - Create milestone folder with descriptive name
+   - Use sequential numbers (1-feature, 2-api, etc.)
+   - Distill handoffs into milestone docs
+   - Move docs to milestone folder
+   - Name reflects actual achievement
+
+## Files
+
+1. **0-milestone-summary.md**:
+   - Date completed
+   - Changes implemented
+   - Decisions made and why
+   - Discoveries found
+   - Current system state
+
+2. **0-milestone-lessons-learned.md**:
+   - Problems encountered
+   - Working solutions
+   - Tools/libraries used
+   - Edge cases identified
+   - Reusable patterns
+
+## Naming Convention
+
+- System files: prefix with "0-" (0-milestone-summary.md)
+- Handoffs: numbered without "0-" (1-setup.md)
+- Milestone folders: numbered without "0-" (1-feature)
+
+## Writing Style
+
+### 0-milestone-summary.md
+
 ```
-# [TOPIC] Handoff - [DATE]
+## Changes
+- Data connector with batch processing
+- Optimized query approach (30x faster)
+- Cross-platform path handling
 
-## Summary
-[2-3 sentence overview]
-
-## Priority Development Requirements (PDR)
-- **HIGH**: [Must address immediately]
-- **MEDIUM**: [Address soon]
-- **LOW**: [Be aware]
+## Decisions
+- Validation library update: 40% faster
+- Nested env vars for configuration
+- Default fallback for missing references
 
 ## Discoveries
-- [Unexpected finding 1]
-- [Unexpected finding 2]
-
-## Problems & Solutions
-- **Problem**: [Issue description]
-  **Solution**: [Solution applied]
-  ```code example if needed```
-
-## Work in Progress
-- [Task 1]: [Progress %]
-- [Task 2]: [Progress %]
-
-## Deviations
-- [Changed X to Y because Z]
-
-## References
-- [doc/path1]
-- [doc/path2]
+- Duplicate entities: Item A has IDs 64, 125
+- Relationship gaps: 246/252 entities connected
+- Missing refs: IDs 53, 54 not in dataset
 ```
 
-## Include
-1. **Date**: Current date at document top
-2. **Summary**: Brief overview of accomplishments and status
-3. **PDR**: Prioritized items needing attention (HIGH/MEDIUM/LOW)
-4. **Discoveries**: Unexpected findings and insights
-5. **Problems & Solutions**: Pair each problem with solution, include code when helpful
-6. **Work in Progress**: Tasks still being worked on with completion estimates
-7. **Deviations**: Changes from original plan/approach
-8. **References**: Links to relevant docs, code, previous handoffs
+### 0-milestone-lessons-learned.md
 
-## Technical Guidelines
-1. **Concise Detail**: Include necessary technical details, avoid exposition
-2. **Targeted Code**: Only include code snippets when they clarify a solution
-3. **Actionable Info**: Focus on what next developer needs to continue
-4. **Error Details**: Include exact error messages for bugs
+```
+## Config Library Migration
 
-## Exclude
-1. **Documented Info**: Skip if in README, .env, docs
-2. **How-to Info**: Don't explain standard procedures
-3. **General Context**: Don't explain basics if documented elsewhere
+**Problem:** `Cannot import Settings from library`
 
-## Structure
-1. **Numbering**: Use sequential numbers per directory (1-setup.md)
-2. **Brevity**: Be concise but thorough
-3. **Organization**: Use chronological or priority structure
-4. **Visuals**: Use mermaid charts for complex workflows
-   ```mermaid
-   graph TD
-     A[Problem] --> B[Solution 1]
-     A --> C[Solution 2]
-   ```
+**Solution:**
+- Update dependency version
+- Use new config pattern
+- Update initialization with correct prefix
+
+## Null Value Handling
+
+**Problem:** `Invalid value in transformation`
+
+**Solution:**
+- Create sanitization function
+- Replace invalid values with null
+- Apply to all values before serialization
+```
 
 ## Example
-❌ `The auth system uses JWT tokens with 24h expiry.`
 
-✅ `[2025-02-25] Login failures caused by timezone in token validation. Fixed with UTC standardization.`
+Before: 3 handoff files
 
-Remember: Pass the baton - share only what isn't obvious from existing documentation.
+```
+handoffs/1-api-setup.md
+handoffs/2-core-entities-implementation.md
+handoffs/3-relationship-fixes.md
+```
+
+After:
+
+```
+handoffs/ (continues to accumulate new handoffs)
+
+handoffs/1-core-entities/
+  ├── 0-milestone-summary.md  # Decisions, discoveries
+  └── 0-milestone-lessons-learned.md    # Patterns, fixes
